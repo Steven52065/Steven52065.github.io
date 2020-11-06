@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zn_CH">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ群名片后缀修改</title>
+    <style>
+        .top {
+            background-color: #66ccff;
+            height: 60px;
+        }
+
+        .main {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 20px;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 6px 6px 6px 0px #D7E7EA;
+            ;
+        }
+
+        .title {
+            font-size: 30px;
+        }
+
+        input {
+            width: 100%;
+        }
+    </style>
+    <script>function myFuntion() {
+            var myname = document.getElementById("input").value;
+            var houzui = document.getElementById("houzui").value;
+            var newname;
+            newname = myname + '\u202E' + houzui + '\u202D';
+            document.getElementById("newname").value = newname;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="top">
+        <span class="title">QQ群名片后缀生成器</span>
+    </div>
+    <div class="main">
+        <input tybe="text" value="请在此输入群名片" id="input"><br \>
+        <input tybe="text" value="请在此输入后缀" id="houzui"><br \>
+        <button onclick="myFuntion()">点击进行转换</button><br \>
+        <input type="text" id="newname" value="结果" readonly="true">
+
+    </div>
+</body>
+
+</html>
